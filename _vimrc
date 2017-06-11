@@ -30,6 +30,11 @@ if filereadable("~/.vim/vim_as_ide.vim")
     source ~/.vim/vim_as_ide.vim
 endif
 
+"no backup file
+set nowritebackup
+set nobackup
+set noswapfile
+
 autocmd! bufwritepost vim_as_ide.vim source ~/.vimrc
 autocmd! bufwritepost ~/.vimrc source %
 
