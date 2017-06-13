@@ -25,6 +25,11 @@ set showcmd
 
 set notimeout ttimeout ttimeoutlen=200
 
+"no backup file
+set nowritebackup
+set nobackup
+set noswapfile
+
 set autoread
 call plug#begin('~/src/vim_plugins')
 Plug 'scrooloose/nerdtree', { 'on':  'NERDTreeToggle' }
@@ -32,11 +37,6 @@ Plug 'airblade/vim-gitgutter'
 Plug 'bling/vim-airline'
 Plug 'tomtom/tcomment_vim'
 call plug#end()
-
-"no backup file
-set nowritebackup
-set nobackup
-set noswapfile
 
 autocmd! bufwritepost ~/.vimrc source %
 
