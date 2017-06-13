@@ -26,16 +26,18 @@ set showcmd
 set notimeout ttimeout ttimeoutlen=200
 
 set autoread
-if filereadable("~/.vim/vim_as_ide.vim")
-    source ~/.vim/vim_as_ide.vim
-endif
+call plug#begin('~/src/vim_plugins')
+Plug 'scrooloose/nerdtree', { 'on':  'NERDTreeToggle' }
+Plug 'airblade/vim-gitgutter'
+Plug 'bling/vim-airline'
+Plug 'tomtom/tcomment_vim'
+call plug#end()
 
 "no backup file
 set nowritebackup
 set nobackup
 set noswapfile
 
-autocmd! bufwritepost vim_as_ide.vim source ~/.vimrc
 autocmd! bufwritepost ~/.vimrc source %
 
 
