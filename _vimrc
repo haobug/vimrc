@@ -35,9 +35,14 @@ call plug#begin('~/src/vim_plugins')
 Plug 'scrooloose/nerdtree', { 'on':  'NERDTreeToggle' }
 Plug 'airblade/vim-gitgutter'
 Plug 'bling/vim-airline'
+Plug 'bronson/vim-trailing-whitespace'
 Plug 'tomtom/tcomment_vim'
+Plug 'https://github.com/scrooloose/syntastic'
+let g:syntastic_java_javac_config_file_enabled=1
+let g:syntastic_java_javac_classpath="bin/:gen/:build/intermediates:$CLASS_PATH"
 call plug#end()
 
+autocmd! bufwritepost _vimrc source %
 autocmd! bufwritepost ~/.vimrc source %
 
 
