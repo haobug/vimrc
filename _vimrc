@@ -51,3 +51,17 @@ autocmd! bufwritepost _vimrc source %
 autocmd! bufwritepost ~/.vimrc source %
 
 
+set nocompatible
+
+source .vimrc.d/_vim/autoload/plug.vim
+source .vimrc.d/_vimrc
+
+syntax on
+syntax enable
+filetype plugin on
+
+set path+=**
+set wildmenu
+
+"set spell
+set paste
